@@ -27,7 +27,12 @@ Invoke-WebRequest -Uri $uri -OutFile ".\createazurelogicapp1.ps1"
 
 ##################### PART 3 ########################
 
-#Navigate into the portal and create a Azure run as account in the automation account 
+<#
+  Navigate into the portal and create a Azure run as account in the automation account 
+  Step 1 : Open the Azure Automation Account. 
+  Step 2 : Navigate to Account Settings -> Run as accounts in the menu blade
+  Step 3 : Create an Azure Run As Account
+#>
 
 ##################### PART 4 ########################
 
