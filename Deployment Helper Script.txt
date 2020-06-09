@@ -13,10 +13,10 @@ $resourceGroupName = $resourceGroup.ResourceGroupName
 $location = $resourceGroup.Location
 
 Set-Location -Path "c:\temp"
-$uri = "https://raw.githubusercontent.com/hemanth8010/RDS-Templates/master/wvd-templates/wvd-scaling-script-spring2020/createazureautomationaccount.ps1"
+$uri = "https://raw.githubusercontent.com/hemanth8010/WVD-Scaling-Script-Spring2020/master/createazureautomationaccount.ps1"
 Invoke-WebRequest -Uri $uri -OutFile ".\createazureautomationaccount.ps1"
 
-$uri = "https://raw.githubusercontent.com/hemanth8010/RDS-Templates/master/wvd-templates/wvd-scaling-script-spring2020/createazurelogicapp.ps1"
+$uri = "https://raw.githubusercontent.com/hemanth8010/WVD-Scaling-Script-Spring2020/master/createazurelogicapp.ps1"
 Invoke-WebRequest -Uri $uri -OutFile ".\createazurelogicapp1.ps1"
 
 .\createazureautomationaccount.ps1 -SubscriptionID $subscriptionId -ResourceGroupName $resourceGroupName -AutomationAccountName WvdScalingAAN -Location westus2 -WorkspaceName WVDtest

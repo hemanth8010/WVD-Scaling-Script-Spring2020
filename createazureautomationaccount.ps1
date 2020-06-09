@@ -56,7 +56,7 @@ param(
 )
 
 #Initializing variables
-$ScriptRepoLocation = "https://raw.githubusercontent.com/hemanth8010/RDS-Templates/master/wvd-templates/wvd-scaling-script-spring2020"
+$ScriptRepoLocation = "https://raw.githubusercontent.com/hemanth8010/WVD-Scaling-Script-Spring2020/master"
 $RunbookName = "WVDAutoScaleRunbook"
 $WebhookName = "WVDAutoScaleWebhook"
 

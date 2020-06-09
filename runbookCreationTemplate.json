@@ -19,7 +19,7 @@
             "metadata": {
                 "description": "The base URI where artifacts required by this template are located."
             },
-            "defaultValue": "https://raw.githubusercontent.com/hemanth8010/RDS-Templates/master/wvd-templates/wvd-scaling-script-spring2020/"
+            "defaultValue": "https://raw.githubusercontent.com/hemanth8010/WVD-Scaling-Script-Spring2020/master/"
         },
         "_artifactsLocationSasToken": {
             "type": "securestring",
