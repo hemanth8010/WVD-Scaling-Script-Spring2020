@@ -1,4 +1,6 @@
-#Copy this to PowerShell ISE in Administrator mode.
+#Copy this to PowerShell ISE in Administrator mode and run according to parts.
+
+##################### PART 1 ########################
 
 Login-AzAccount
 
@@ -19,11 +21,15 @@ Invoke-WebRequest -Uri $uri -OutFile ".\createazureautomationaccount.ps1"
 $uri = "https://raw.githubusercontent.com/hemanth8010/WVD-Scaling-Script-Spring2020/master/createazurelogicapp.ps1"
 Invoke-WebRequest -Uri $uri -OutFile ".\createazurelogicapp1.ps1"
 
+##################### PART 2 ########################
+
 .\createazureautomationaccount.ps1 -SubscriptionID $subscriptionId -ResourceGroupName $resourceGroupName -AutomationAccountName WvdScalingAAN -Location westus2 -WorkspaceName WVDtest
+
+##################### PART 3 ########################
 
 #Navigate into the portal and create a Azure run as account in the automation account 
 
-
+##################### PART 4 ########################
 
 $wvdHostpool = Get-AzWvdHostPool -resourceGroupName $resourceGroupName | Out-GridView -PassThru -Title "Select the host pool you'd like to scale"
 $hostPoolName = $wvdHostpool.Name
@@ -53,6 +59,9 @@ $WebhookURI = (Get-AzAutomationVariable `
 $maintenanceTagName = Read-Host -Prompt "Enter the name of the Tag associated with VMs you don't want to be managed by this scaling tool"
 $LogAnalyticsWorkspaceId = Read-Host -Prompt "Enter the ID of the Log Analytics Workspace"
 $LogAnalyticsPrimaryKey = Read-Host -Prompt "Enter the Primary key of the Log Analytics Workspace"
+
+
+##################### PART 5 ########################
 
 .\createazurelogicapp1.ps1 `
   -ResourcegroupName $resourceGroupName `
